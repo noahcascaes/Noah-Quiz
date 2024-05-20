@@ -1,10 +1,11 @@
-## Como jogar o Noah Quiz
+# Como jogar o Noah Quiz
 
-Linux:
+## Linux
 
- - 
- - Pede para chatgpt te ensinar sobre markdown
- - Salva, adiciona no repositório (git add... git push...)
+### Ubuntu/Debian
 
-
-> Citação
+ - Abra seu computador
+ - Abra o Terminal (Ctrl + Alt + T)
+ - Vá ao GitHub
+ - Encaminhe-se ao repositório e clique em "Code" ou "Código"
+ - Clique em "HTTPS" e 
