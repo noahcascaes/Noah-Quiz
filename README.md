@@ -4,8 +4,9 @@
 
 ### Ubuntu/Debian
 
- - Abra seu computador
- - Abra o Terminal (Ctrl + Alt + T)
- - Vá ao GitHub
- - Encaminhe-se ao repositório e clique em "Code" ou "Código"
- - Clique em "HTTPS" e copie
+ - Abra seu computador.
+ - Abra o Terminal (Ctrl + Alt + T).
+ - Digite: git clone git@github.com:noahcascaes/Noah-Quiz.git.
+ - Caso esteja tentando colar com (Ctrl + V), não irá funcionar, mas só funciona usando (Ctrl + Alt + V).
+ - Para executar, clique em Enter.
+ - Se pedir credenciais colocar o seu usuário e senha do GitHub, ou resolver com a chave SSH [clicando aqui.](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
