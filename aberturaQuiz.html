@@ -2,38 +2,72 @@
 <html lang="pt-BR">
 
 <head>
-    <style type="text/css">
-        body {
-            background-color: rgb(2, 2, 43);
-            margin-left: 20%;
-            margin-right: 20%;
-            padding: 10px 10px 10px 10px;
-            border: 10px solid black;
-            color: white;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-    </style>
-    <link rel="icon" href="figuras/logos/LogoNoahQuiz.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Noah Quiz</title>
+
+    <link rel="icon" href="figuras/logos/LogoNoahQuiz.ico">
     <link rel="apple-touch-icon" href="figuras/logos/LogoNoahQuiz.png">
 
-    <link rel="icon" href="figuras/logos/LogoNoahQuiz.png" type="image/png">
+    <style>
+        body {
+            background-color: rgb(2, 2, 43);
+            padding: 10%;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
 
-    <link rel="icon" href="figuras/logos/LogoNoahQuiz.svg" type="image/svg+xml">
-    <title>Noah Quiz</title>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            background-color: rgb(2, 2, 43);
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 20px;
+            width: 250px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: rgb(2, 2, 43);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
-   <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;">Bem vindo ao Noah Quiz</h1>
-    <h1><a href="Perguntas/1PerguntaQuiz.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;">
-        COME&Ccedil;AR
-    </a></h1>
-    <h1><a href="atrasDasCameras/Creditos.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  color: white;">
-        CR&Eacute;DITOS
-    </a></h1>
-    <h1><a href="Linguagens.html">LINGUAGENS</a></h1>
-    <h1><a href="atrasDasCameras/sobreoautor.html">SOBRE O CRIADOR</a></h1>
-    <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;">ASS:Noah</h3>
+
+    <h1>Bem-vindo ao Noah Quiz</h1>
+
+    <div class="container">
+        <button data-link="quiz.html">COMEÇAR</button>
+        <button data-link="atrasDasCameras/Creditos.html">CRÉDITOS</button>
+        <button data-link="Linguagens.html">LINGUAGENS</button>
+        <button data-link="atrasDasCameras/sobreoautor.html">SOBRE O CRIADOR</button>
+    </div>
+
+    <script>
+        document.querySelectorAll("button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
 </body>
 
 </html>

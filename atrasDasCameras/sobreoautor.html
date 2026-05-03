@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <style type="text/css">
-            h1 {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: white
-            }
-            body {
-                background-color: rgb(2, 2, 43);
-                margin-left: 20%;
-            margin-right: 20%;
-            padding: 10px 10px 10px 10px;
-            border: 10px solid black;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            }
-            a {
-                color: white;
-            }
-        </style>
-        <title>
-            Noah Quiz
-        </title>
-        <link rel="icon" href="../figuras/logos/LogoNoahQuiz.ico" type="image/x-icon">
+
+<head>
+    <style type="text/css">
+        body {
+            background-color: rgb(2, 2, 43);
+            padding: 10%;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        button {
+            background-color: rgb(2, 2, 43);
+            color: white;
+            font-family: Arial, sans-serif;
+            border: 2px solid white;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: rgb(2, 2, 43);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>
+        Noah Quiz
+    </title>
+    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.ico" type="image/x-icon">
 
     <link rel="apple-touch-icon" href="../figuras/logos/LogoNoahQuiz.png">
 
     <link rel="icon" href="../figuras/logos/LogoNoahQuiz.png" type="image/png">
 
     <link rel="icon" href="../figuras/logos/LogoNoahQuiz.svg" type="image/svg+xml">
-    <style>
-            h1
-            {
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                font-size:'20xp'
-            }
-            p {
-                line-height: 25px;
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                font-size: 20px;
-                color: white
-                
-            }
-        </style>
-    </head>
-    <body>
-        
-        <h1>Noah Tavares Cascaes</h1>
-        <h6>O meu nome completo é uma resposta de pergunta, fique atento!</h6>
-        <br />
-        <img src="https://lh3.googleusercontent.com/a/ACg8ocLH8tkj_rFcJ3SGRpmV2FzIB_cyk8okbBet7o8_cUH95g5oPaRQ=s288-c-no" />
-        <br />
-        <p>Noah Tavares Cascaes, nasceu no dia 19 de dezembro de 2014 na cidade de Curitiba, no Paraná.</p>
-        <p>Com 9 anos, começou a prestar atenção em seu sonho do futuro: ser um  programador de Arsoft (Jogo).</p> 
-        <p>Num trabalho de programação da escola, ele quis aprender HTML, e seu pai o ensinou. Com o que aprendeu, ele percebeu que poderia criar um jogo de Quiz, inspirado no Gênio Quiz, feito por André Birnfeld. Cada vez aprende mais e mais, e caso pergunte quem está escrevendo isso, é o  próprio Noah carne e osso (;.</p>
-        <a href="aberturaQuiz.html"><h1>Voltar</h1></a>
-        <h3 style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ASS:Noah</h3>
-    </body>
+</head>
+
+<body>
+    <h1 title="Decore isso!">Noah Tavares Cascaes</h1><br /><br />
+    <p>Noah Tavares Cascaes,
+        nasceu no dia 19 de dezembro de 2014 na cidade de Curitiba,
+        no Paraná.</p>
+    <p>Com 9 anos,
+        começou a prestar atenção em seu sonho do futuro: ser um programador de Arsoft (Jogo).</p>
+    <p>Num trabalho de programação da escola,
+        ele quis aprender HTML,
+        e seu pai o ensinou. Com o que aprendeu,
+        ele percebeu que poderia criar um jogo de Quiz,
+        inspirado no Gênio Quiz,
+        feito por André Birnfeld. Cada vez aprende mais e mais,
+        assim com 11 voltou para esse jogo com tudo com suas habilidades de programação,
+        e caso pergunte quem está escrevendo isso,
+        é o próprio Noah carne e osso (; .</p>
+    <br />
+    <div>
+        <button id="voltarBtn">Voltar</button>
+    </div>
+    <script> document.getElementById("voltarBtn").addEventListener("click", function () {
+            location.href = "../aberturaQuiz.html";
+        });
+    </script>
+</body>
+
 </html>
