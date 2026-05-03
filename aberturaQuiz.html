@@ -10,43 +10,7 @@
     <link rel="icon" href="figuras/logos/LogoNoahQuiz.ico">
     <link rel="apple-touch-icon" href="figuras/logos/LogoNoahQuiz.png">
 
-    <style>
-        body {
-            background-color: rgb(2, 2, 43);
-            padding: 10%;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        button {
-            background-color: rgb(2, 2, 43);
-            color: white;
-            border: 2px solid white;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-size: 20px;
-            width: 250px;
-        }
-
-        button:hover {
-            background-color: white;
-            color: rgb(2, 2, 43);
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-    </style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -61,7 +25,7 @@
     </div>
 
     <script>
-        document.querySelectorAll("button").forEach(btn => {
+        document.querySelectorAll(".container button").forEach(btn => {
             btn.addEventListener("click", () => {
                 location.href = btn.dataset.link;
             });
