@@ -2,57 +2,39 @@
 <html lang="pt-BR">
 
 <head>
-    <style type="text/css">
-        h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white
-        }
-        body {
-            background-color: rgb(2, 2, 43);
-            margin-left: 20%;
-            margin-right: 20%;
-            padding: 10px 10px 10px 10px;
-            border: 10px solid black;
-        }
-        a {
-            color: white;
-        }
-    </style>
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.ico" type="image/x-icon">
-
-    <link rel="apple-touch-icon" href="../figuras/logos/LogoNoahQuiz.png">
-
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.png" type="image/png">
-
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
     <title>Noah Quiz</title>
 </head>
 
 <body>
-    <img src="../figuras/bolas/bolinha7.png">
-    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">QUAL É O SOM DISSO?</h1>
+    <div class="topo">
+        <div class="numero">7</div>
+
+        <h1 class="titulo">De que desenho é essa música?</h1>
+    </div>
     <audio controls>
-        <source src="../mp3/Tom-und-Jerry.mp3" type="audio/mp3">
-        <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Seu navegador não suporta o elemento de áudio.</h3>
-      </audio>      
-    <br />
-    <br />
-    <a href="../Respostas alternativas/ERRADO!.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>SCOOBY-DOO</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>CORRIDA MALUCA</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>POPEYE</h1>
-    </a>
-    <a href="8Pergunta.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>TOM E JERRY</h1>
-    </a>
-    <a href="../Acessibilidade/SOUSURDO.HTML" style="color: #002fff; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1 style="color: #002fff;">Sou surdo</h1>
-    </a>
-    <h3 style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ASS:Noah</h3>
+        <source src="../mp3/Tom-und-Jerry.mp3" type="audio/mpeg"/>
+        <p>Seu navegador não suporta o elemento de áudio.</p>
+    </audio>
+    <div class="container">
+        <button data-link="8Pergunta.html" aria-label="Resposta correta">Tom e Jerry</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">Corrida Maluca</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">Scooby-Doo</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">Popeye</button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".container button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
 </body>
 
 </html>

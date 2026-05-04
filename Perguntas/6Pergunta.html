@@ -1,54 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <style type="text/css">
-            h1 {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: white
-            }
-            body {
-                background-color: rgb(2, 2, 43);
-                margin-left: 20%;
-            margin-right: 20%;
-            padding: 10px 10px 10px 10px;
-            border: 10px solid black;
-            }
-            a {
-                color: white;
-            }
-        </style>
-        <link rel="icon" href="../figuras/logos/LogoNoahQuiz.ico" type="image/x-icon">
 
-        <link rel="apple-touch-icon" href="../figuras/logos/LogoNoahQuiz.png">
-    
-        <link rel="icon" href="../figuras/logos/LogoNoahQuiz.png" type="image/png">
-    
-        <link rel="icon" href="../figuras/logos/LogoNoahQuiz.svg" type="image/svg+xml">
-        <title>Noah Quiz</title>
-    </head>
-    <body>
-        <img src="../figuras/bolas/bolinha.png">
-        <h4 title="&Eacute; MENTIRA, &Eacute; CLIC&Aacute;VEL" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">N&atilde;o ligue, s&oacute; deixei o texto sublinhado</h4>
-        <a href="../dicas/Dica2.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>Qual &eacute; o N&uacute;mero desta quest&atilde;o?</h1>
-        </a>
-        <br />
-        <a href="../Respostas alternativas/ERRADO!.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-            <h1>7</h1>
-        </a>
-        <a href="../Respostas alternativas/ERRADO!.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-            <h1>5</h1>
-        </a>
-        <a href="../Respostas alternativas/ERRADO!.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-            <h1>9</h1>
-        </a>
-        <a href="../Respostas alternativas/ERRADO!.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-            <h1>8</h1>
-        </a>
-        <br />
-        <br />
-        <a href="6(2)Pergunta.html" style="color: rgb(2, 2, 43);">
-            <h3 style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ASS:Noah</h3>
-    </a>
-    </body>
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
+    <title>Noah Quiz</title>
+</head>
+
+<body>
+    <div class="topo">
+        <div class="numero"> </div>
+
+        <h1 class="titulo">Qual é o número desta questão?</h1>
+    </div>
+    <div class="container">
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">7</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">9</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">3</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">5</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">8</button>
+        <button invisible="true" data-link="6.1Pergunta.html" aria-label="Resposta correta"></button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".container button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
+</body>
+
 </html>

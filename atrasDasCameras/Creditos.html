@@ -2,69 +2,28 @@
 <html lang="pt-BR">
 
 <head>
-    <style type="text/css">
-        h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white
-        }
-        body {
-            background-color: rgb(2, 2, 43);
-            margin-left: 20%;
-            margin-right: 20%;
-            padding: 10px 10px 10px 10px;
-            border: 10px solid black;
-        }
-        a {
-            color: white;
-        }
-        h3 {
-            color: white;
-        }
-    </style>
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
 
-    <link rel="apple-touch-icon" href="../figuras/logos/LogoNoahQuiz.png">
-
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.png" type="image/png">
-
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.svg" type="image/svg+xml">
-    <title>Noah Quiz</title>
+    <title>
+        Noah Quiz
+    </title>
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
 </head>
 
 <body>
-    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">DONO</h1>
-    <a href="mailto:noah.cascaes@gmail.com" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h3>Noah Tavares Cascaes</h3>
-    </a>
+    <h1>CRÉDITOS</h1>
+    <h3>Noah</h3>
     <br />
-    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">PROGRAMADOR(ES)</h1>
-    <a href="mailto:noah.cascaes@gmail.com" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h3>Noah Tavares Cascaes</h3>
-    </a>
-    <br />
-    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">AJUDANTES</h1>
-    <a href="mailto:caio.cascaes@gmail.com" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h3>Caio Lúcio Ferreira Cascaes (pai)</h3>
-    </a>
-
-    <a href="https://chat.openai.com/" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h3>ChatGPT Openai</h3>
-    </a>
-    <br />
-    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ESPECIAL</h1>
-    <a href="mailto:hannah.cascaes@gmail.com" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h3>Hannah Tavares Cascaes(Irmã)</h3>
-    </a>
-    <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Felipe "Não sei o nome completo dele"(Prof. de Programação na escola)</h3>
-    <a href="mailto amor.cascaes@gmail.com" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-    <h3>Maurianna do Nascimento Tavares Cascaes</h3>
-    </a> 
-    <a href="../aberturaQuiz.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>Voltar</h1>
-    </a>
-    <h3 style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        ASS:Noah
-    </h3>
+    <div>
+        <button id="voltarBtn">Voltar</button>
+    </div>
+    <script> document.getElementById("voltarBtn").addEventListener("click", function () {
+            location.href = "../aberturaQuiz.html";
+        });
+    </script>
 </body>
 
 </html>

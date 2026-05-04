@@ -1,54 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <style type="text/css">
-        h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white
-        }
-        body {
-            background-color: rgb(2, 2, 43);
-            margin-left: 20%;
-            margin-right: 20%;
-            padding: 10px 10px 10px 10px;
-            border: 10px solid black;
-        }
-        a {
-            color: white;
-        }
-    </style>
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.ico" type="image/x-icon">
-
-    <link rel="apple-touch-icon" href="../figuras/logos/LogoNoahQuiz.png">
-
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.png" type="image/png">
-
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
     <title>Noah Quiz</title>
 </head>
 
 <body>
-    <img src="../figuras/bolas/bolinha9.png" />
-    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        Qual s&iacute;mbolo &eacute; usado para colocar palavras no Minecraft com cores diferentes e com fontes diferentes?
-    </h1>
-    <br />
-    <a href="10pergunta.html"
-        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;">
-        <h1>&sect;</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html"
-        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;">
-        <h1>&gt;</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html"
-        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;">
-        <h1>&deg;</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html"
-        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;">
-        <h1>&not;</h1>
-    </a>
-    <h3 style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ASS:Noah</h3>
-    </body>
-    </html>
+    <div class="topo">
+        <div class="numero">9</div>
+
+        <h1 class="titulo">Qual símbolo é usado para colocar palavras no Minecraft com cores e fontes diferentes?</h1>
+    </div>
+    <div class="container">
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">ł</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">¬</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">£</button>
+        <button data-link="10pergunta.html" aria-label="Resposta correta">§</button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".container button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

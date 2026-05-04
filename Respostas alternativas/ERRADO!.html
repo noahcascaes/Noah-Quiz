@@ -2,41 +2,34 @@
 <html lang="pt-BR">
 
 <head>
-    <style type="text/css">
-        h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: red
-        }
-        body {
-            background-color: rgb(2, 2, 43);
-            margin-left: 20%;
-            margin-right: 20%;
-            padding: 10px 10px 10px 10px;
-            border: 10px solid black;
-        }
-        a {
-            color: white;
-        }
-    </style>
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="apple-touch-icon" href="../figuras/logos/LogoNoahQuiz.png">
-
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.png" type="image/png">
-
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.svg" type="image/svg+xml">
     <title>Noah Quiz</title>
+
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
+
+<link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
-    <a href="../aberturaQuiz.html"
-        style="color: red; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>RENICIAR</h1>
-    </a>
-    <h5 style="color: red; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">PERDEU OTÁRIO(A)
-        KKKK</h5>
-    <img src="../figuras/palavras imagens/kkkkkkk.png">
-    <h3 style="color: red; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ASS:Noah</h3>
+<body class="vermelho">
+
+    <h1>ERROU KSKSKKS</h1>
+    <h3>KSKSKSKSKSKS QUE BURRO MDS JAOSDH</h3>
+
+    <div class="container">
+        <button class="vermelho" data-link="../aberturaQuiz.html">RENICIAR TUDO >:)</button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".container button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
 </body>
 
 </html>

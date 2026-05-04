@@ -1,68 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <style type="text/css">
-        h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white
-        }
-        body {
-            background-color: rgb(2, 2, 43);
-            margin-left: 20%;
-            margin-right: 20%;
-            padding: 10px 10px 10px 10px;
-            border: 10px solid black;
-        }
-        a {
-            color: white;
-        }
-    </style>
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.ico" type="image/x-icon">
-
-    <link rel="apple-touch-icon" href="../figuras/logos/LogoNoahQuiz.png">
-
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.png" type="image/png">
-
-    <link rel="icon" href="../figuras/logos/LogoNoahQuiz.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
     <title>Noah Quiz</title>
 </head>
 
 <body>
-    <img src="../figuras/bolas/bolinha8.png" />
-    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Qual &eacute; meu nome completo?</h1>
-    <br />
-    <br />
-    <a href="../Respostas alternativas/ERRADO!.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-    <h1>Noah de Pascale Vieira</h1>
-    </a>
-    <a href="9pergunta.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>Noah Tavares Cascaes</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>No&eacute; Tavares Cascaes</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>Leonardo Tavares Cascaes</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>Leonardo de Pascale Vieira</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>No&eacute; Pascale de Vieira</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>Noah Tavares</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>Noah Cascaes</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>Leonardo Tavares</h1>
-    </a>
-    <a href="../Respostas alternativas/ERRADO!.html" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <h1>Leonardo Cascaes</h1>
-    </a>
-    <h3 style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ASS:-------</h3>
+    <div class="topo">
+        <div class="numero">8</div>
+
+        <h1 class="titulo">Qual é o meu nome completo?</h1>
+    </div>
+    <div class="container">
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">Noah de Pascale Vieira</button>        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">Noah Cascaes</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">Noah Tavares Vieira</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">Noah de Pascale</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">Noah Cascaes de Pascale</button>
+        <button data-link="9pergunta.html" aria-label="Resposta correta">Noah Tavares Cascaes</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">Noah de Pascale Tavares</button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".container button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
 </body>
 
 </html>
