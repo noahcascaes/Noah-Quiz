@@ -35,7 +35,7 @@ button {
 button:hover {
     background-color: white;
     color: rgb(2, 2, 43);
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 button:active {
@@ -77,16 +77,38 @@ h1 {
 
 .cores {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: 0px;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.cores img {
+[cor="azul"] {
+    background-color: blue;
+}
+
+[cor="verde"] {
+    background-color: limegreen;
+}
+
+[cor="vermelho"] {
+    background-color: red;
+}
+
+[cor="lilas"] {
+    background-color: purple;
+}
+
+[cor="branco"] {
+    background-color: white;
+}
+[cor] {
     width: 75px;
     height: 75px;
 }
-
+.cores div {
+    border-radius: 10px;
+    border: 2px solid white;
+}
 @media (max-width: 600px) {
     body {
         padding: 5%;
@@ -98,5 +120,8 @@ h1 {
 
     .topo {
         flex-direction: column;
+    }
+    .progresso {
+        margin-top: 20px;
     }
 }

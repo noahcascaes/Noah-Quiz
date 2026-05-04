@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="figuras/logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="figuras/logos/LogoNoahQuiz.png">
+    <title>Noah Quiz</title>
+
+</head>
+
+<body>
+    <div class="topo">
+        <div class="numero">5</div>
+
+        <h1 class="titulo">Agora clique na ordem correta</h1>
+    </div>
+    <div class="container">
+        <div class="cores">
+            <button cor="azul"></button>
+            <button cor="verde"></button>
+            <button cor="vermelho"></button>
+            <button cor="lilas"></button>
+            <button cor="branco"></button>
+        </div>
+    </div>
+    <div class="cores" id="progresso">
+        
+    </div>
+    <script>
+        const sequencia = ["azul", "verde", "vermelho", "verde", "lilas", "branco", "lilas"];
+        let passos = 0;
+
+        const progresso = document.querySelector("#progresso");
+        
+
+        document.querySelectorAll(".cores button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const cor = btn.getAttribute("cor");
+
+                if (cor === sequencia[passos]) {
+                    // adiciona visual do progresso
+                    const novo = document.createElement("div");
+                    novo.setAttribute("cor", cor);
+
+                    progresso.appendChild(novo);
+
+                    passos++;
+
+                    if (passos === sequencia.length) {
+                        window.location.href = "6Pergunta.html";
+                    }
+
+                } else {
+                    window.location.href = "../Respostas alternativas/ERRADO!.html";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
