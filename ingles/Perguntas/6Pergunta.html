@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
+    <title>Noah Quiz</title>
+</head>
+
+<body>
+    <div class="topo">
+        <div class="numero"> </div>
+
+        <h1 class="titulo">Qual é o número desta questão?</h1>
+    </div>
+    <div class="container">
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">7</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">9</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">3</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">5</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">8</button>
+        <button invisible="true" data-link="6.1Pergunta.html" aria-label="Resposta correta"></button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".container button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

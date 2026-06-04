@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
+    <title>Noah Quiz</title>
+</head>
+
+<body>
+    <div class="topo">
+        <div class="numero">5</div>
+
+        <h1 class="titulo">Lembre-se desta sequência de cores!</h1>
+    </div>
+    <div class="cores">
+        <div cor="azul"></div>
+        <div cor="verde"></div>
+        <div cor="vermelho"></div>
+        <div cor="verde"></div>
+        <div cor="lilas"></div>
+        <div cor="branco"></div>
+        <div cor="lilas"></div>
+    </div>
+    <div class="container">
+        <button data-link="5Resposta.html" aria-label="Resposta correta">Decorei!</button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".container button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

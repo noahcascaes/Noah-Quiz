@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Quiz</title>
+    <link rel="icon" href="ingles/logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="ingles/logos/LogoNoahQuiz.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="titulo">Noah Quiz</div>
+    <div class="container">
+        <div class="bandeiras">
+            <button data-link="Portugues/aberturaQuiz.html">🇧🇷</button>
+            <button data-link="ingles/aberturaQuiz.html">🇺🇸</button>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll("button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                window.location.href = btn.dataset.link;
+            });
+        });
+    </script>
+</body>
+</html>

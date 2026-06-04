@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
+    <title>Noah Quiz</title>
+</head>
+
+<body>
+    <div class="topo">
+        <div class="numero">10</div>
+
+        <h1 class="titulo">Qual pergunta tem a numeração errada?</h1>
+    </div>
+    <div class="container">
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">3</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">6</button>
+        <button data-link="../Respostas alternativas/Fim.html" aria-label="Resposta correta">4</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">9</button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".container button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

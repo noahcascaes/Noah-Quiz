@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
+    <title>Noah Quiz</title>
+    <style>
+        button:hover[aria-label="Resposta correta"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:hover[aria-label="Resposta incorreta"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topo">
+        <div class="numero">3</div>
+
+        <h1 class="titulo">Encontre o botão!</h1>
+    </div>
+    <div class="container">
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">1</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">2</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">3</button>
+        <button data-link="5Pergunta.html" aria-label="Resposta correta">4</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">5</button>
+        <button data-link="../Respostas alternativas/ERRADO!.html" aria-label="Resposta incorreta">6</button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".container button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

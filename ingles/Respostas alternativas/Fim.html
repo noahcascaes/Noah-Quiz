@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Noah Quiz</title>
+
+    <link rel="icon" href="../logos/LogoNoahQuiz.ico">
+    <link rel="apple-touch-icon" href="../logos/LogoNoahQuiz.png">
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <h1>FIM</h1>
+    <h3>Vem aí o Noah Quiz 2!</h3>
+
+    <div class="container">
+        <button data-link="../aberturaQuiz.html">VOLTAR PARA A TELA DE TÍTULO</button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".container button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                location.href = btn.dataset.link;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
